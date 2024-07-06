@@ -1,2 +1,14 @@
-# MLOps-Dicoding
-Submission 1: Machine Learning Pipeline - Stress Detection from Social Media Articles
+# Submission 1: Machine Learning Pipeline - Stress Detection from Social Media Articles
+Nama: Anang Ridwan Syah
+
+Username dicoding: anangrdwnsyh
+
+| | Deskripsi |
+| ----------- | ----------- |
+| Dataset | [Stress Detection from Social Media Articles](https://www.kaggle.com/datasets/mexwell/stress-detection-from-social-media-articles/data) |
+| Masalah | Istilah mental health sekarang sudah tidak asing lagi. Kaum muda sering menggunakan istilah ini untuk membahas kondisi psikologis dan emosional seseorang. Media sosial adalah salah satu dari banyak hal yang dapat memengaruhi kesehatan mental seseorang. Karena banyaknya orang yang menggunakan media sosial saat ini, mereka menempatkan identitas mereka saat berekspresi melalui jejaring sosial, sehingga kesehatan mental mereka sangat bergantung pada media sosial. Komentar atau pesan di media sosial dapat secara tidak langsung mencerminkan kesehatan mental seseorang. Namun, untuk mengetahui kesehatan mental seseorang melalui pesan atau komentar tersebut, Anda mungkin memerlukan pengetahuan yang lebih dalam bidang bahasa dan psikologi atau seorang spesialis di bidang tersebut. |
+| Solusi machine learning | Dengan menemukan pola dalam teks yang berkaitan dengan stres, model machine learning dapat membantu menyelesaikan masalah yang diangkat. Pola-pola ini dapat mencakup ekspresi emosional yang khas, kata-kata atau frasa yang sering muncul dalam situasi stres, atau bahkan struktur kalimat yang menunjukkan kecemasan atau tekanan. Model klasifikasi dapat memproses konten baru dengan mengklasifikasikannya sebagai positif, yang berarti tidak ada stres, atau negatif, yang berarti stres. Ini akan membantu menemukan konten yang menunjukkan stres di berbagai artikel media sosial. |
+| Metode pengolahan | Dataset awal memiliki 4 kolom, tetapi hanya fitur "Body_Title" dan label yang relevan untuk proyek ini. Kolom-kolom lainnya akan dihapus. Setelah itu, dataset akan dibagi menjadi data training dan evaluasi dengan perbandingan 80% untuk training dan 20% untuk evaluasi. Selain itu, fitur "Body_Title" akan diubah menjadi lowercase, dan label akan diubah menjadi nilai integer. |
+| Arsitektur model | Model yang digunakan dalam arsitektur ini mencakup lapisan Embedding, LSTM Bidirectional, lapisan Fully Connected, dan lapisan Output dengan aktivasi sigmoid. Optimizer yang dipilih adalah Adam dengan fungsi loss BinaryCrossentropy. |
+| Metrik evaluasi | Metrik evaluasi yang diterapkan mencakup ExampleCount, AUC, FalsePositives, TruePositives, FalseNegatives, TrueNegatives, serta BinaryAccuracy. |
+| Performa model | Berdasarkan nilai metrik yang diperoleh dari Evaluator, didapatkan AUC secara keseluruhan sebesar 82.7%, dengan Binary Accuracy mencapai 91.3%. Untuk False Negatives, False Positives, True Negatives, dan True Positives, terdapat masing-masing 14, 41, 33, dan 543 dari total 631 Example Count. Pada pengujian menggunakan tf-serving, model mampu memprediksi label yang konsisten dengan hasil sebenarnya. Hasil tersebut menunjukkan bahwa kinerja model ini sudah cukup baik. |
